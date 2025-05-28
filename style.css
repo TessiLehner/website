@@ -1,0 +1,96 @@
+/* Reset some default browser styles (optional) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial Black, sans-serif;
+
+  background-color: #ffffff;
+  padding: 0px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+ width: 100vw;
+  display: flex;
+justify-content: space-between;
+display: none;
+  
+}
+
+.header a {
+  text-wrap: none;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  margin: 0 auto;
+  transition: flex 0.4s ease;
+  gap: 5px;
+}
+
+/* Remove the gallery hover effect that changes height/flex */
+.gallery:hover {
+ height: 100%;
+  flex: 15;
+}
+
+.gallery-continer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease;
+  gap: 5px;
+  margin-top: 22px;
+}
+
+.gallery-item {
+  display: flex;              
+  align-items: flex-start;     /* Align children vertically to the top */
+  justify-content: flex-start; /* Align children horizontally to the left */
+  
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+  transform-origin: top;
+}
+
+
+
+.gallery-item:hover {
+  flex: 4;
+  transition: all 0.4s ease;
+}
+
+/* Image styling with object-fit: contain ensures the full image is visible */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;  /* Aligns the image to the left and top */
+  transform-origin: left;
+  transition: all 0.4s ease;
+}
+.gallery-item img:hover {
+  height: 100%;
+  width: 100%;
+
+}
